@@ -1,16 +1,28 @@
-def fizzbuzz (number)
-	if number % 3 == 0 && number % 5 == 0
-		puts "FizzBuzz"
-	elsif number % 3 == 0
-		puts "Fizz"
-	elsif number % 5 == 0
-		puts "Buzz"
-	else puts "That is not divisible by 3 or 5!"
-	end
+def fizzbuzz (number, hash)
+
+keys = hash.keys
+
+(1..number).each { |n|
+  response = ''
+  keys.each {|k|
+    if n % k == 0
+      response += hash[k]
+    end
+  }
+  if response != '' then puts response end
+}
+
 end
 
-fizzbuzz(3)
-fizzbuzz(5)
-fizzbuzz(15)
-fizzbuzz(4)
-fizzbuzz("Not a number!")
+hash1 = {1 => 'fizz' , 2 => 'buzz', 5 => 'gork'}
+hash2 = {2 => 'fizz' , 4 => 'buzz', 8 => 'gork', 32 => 'schmoe'}
+hash3 = {13 => 'grom' , 25 => 'buzz', 8 => 'gork', 16 => 'fizz'}
+
+puts 'Test 1: '
+fizzbuzz(15, hash1)
+puts 'Test 2: '
+fizzbuzz(32, hash2)
+puts 'Test 3: '
+fizzbuzz(50, hash3)
+
+
