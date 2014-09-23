@@ -1,14 +1,10 @@
 FizzBuzz
 ========
 
-This short program consists of a single method that takes a number as input and... 
-	
-	if it is divisible by 3 will print "Fizz"
+This short program consists of a single method that takes a number and a hash as input.
 
-	if divisible by 5 will print "Buzz"
+It tests all the numbers from 1 to the number input against the keys in the hash.
 
-	if divisible by both 3 and 5 will print "FizzBuzz" 
-
-	if not divisible by either 3 of 5 or if the input was not a number it will return "That is not divisible by 3 or 5!"
+If the number is divisible by any of the keys it will append the appropriate string onto a response and print the response on a new line each cycle.
 
 Following the method are a few test statements.
